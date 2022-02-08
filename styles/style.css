@@ -2,7 +2,8 @@
 /* -------------------- Custom Properties -------------------- */
 :root {
   /* Colors */
-  --clr-dark: #202731;
+  --clr-dark: #0f0f10;
+  --clr-grey: #202731;
   --clr-light: #f69c01;
   --clr-white: #ffffff;
   --clr-white-hsl: 0 0% 100%;
@@ -46,7 +47,7 @@ body {
   font-family: 'Roboto', sans-serif;
   font-size: var(--font-size-400);
   color: #ffffff;
-  background: #202731;
+  background: var(--clr-grey);
   overflow-x: hidden;
 }
 
@@ -135,13 +136,14 @@ header {
 .text_white { color: var(--clr-white);}
 
 .background_dark { background: var(--clr-dark);}
+.background_grey { background: var(--clr-grey);}
 .background_accent { background: var(--clr-light);}
 .background_white { background: var(--clr-white);}
 
 .background_blue { background: #3c31dd; }
 .background_red { background: #dd3f31; }
 .background_pink { background: #ff0066; }
-.background_dark { background: #0f0f10; }
+/* .background_dark { background: #0f0f10; } */
 .background_darkblue { background: #035667; }
 .background_darkpurple { background: #282165; }
 
@@ -329,14 +331,34 @@ header {
 }
 
 .underline-indicators > * {
+  cursor: pointer;
   padding: var(--underline-gap, 1rem) 0;
+  border: 0;
   border-bottom: .2rem solid #FFFFFF00;
 }
 
 .underline-indicators > .possiblehover:hover {
   border-color: #FFFFFF43;
 }
-
-.underline-indicators > .active{
+.underline-indicators > .active,
+.underline-indicators > [aria-selected="true"] {
   border-color: #FFFFFFFF;
+}
+
+.tab-list {
+  --gap: 2rem;
+}
+
+.dot-indicators > * {
+  cursor: pointer;
+  border: 0;
+  border-radius: 50%;
+  aspect-ratio: 1;
+  padding: .5em;
+  background-color: var(--clr-white);
+  opacity: 25%;
+}
+
+.dot-indicators > .possiblehover:hover {
+  opacity: 50%;
 }
