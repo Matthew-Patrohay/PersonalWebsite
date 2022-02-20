@@ -11,6 +11,7 @@
   --clr-grey-hsl: 215 21% 16%;
   --clr-light-hsl: 38 99% 48%;
   --clr-white-hsl: 0 0% 100%;
+  --clr-blur-hsl: 148 0% 66%;
 
   /* font sizes */
   --font-size-900: 9.375rem;
@@ -332,22 +333,34 @@ header {
 
 /* Navigation */
 
-/* Mobile */
+/* Mobile / standard base */
 .primary-navigation {
-  --underline-gap: 1.5rem;
+  /* --underline-gap: 1.5rem; */
   position: fixed;
   list-style: none;
   padding: min(20rem, 10vh) 2rem;
-  margin: 0;
+  margin: 0 0 0 0;
   flex-direction: column;
-  inset: 0 0 0 30vw;
+  inset: 0 0 0 0vw;
   z-index: 1000;
   background: hsl(var(--clr-dark-hsl) / 1);
 }
 
+.main_indicators {
+  height: 4rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  letter-spacing: 2px;
+}
+
+.menu-selector {
+  letter-spacing: 2px;
+}
+
 @supports (backdrop-filter: blur(1.5rem)) {
   .primary-navigation {
-      background: hsl( var(--clr-white-hsl) / 0.07);
+      background: hsl( var(--clr-blur-hsl) / 0.07);
       backdrop-filter: blur(1.5rem);
   }
 }
@@ -355,10 +368,8 @@ header {
 /* Tablet */
 @media (min-width: 35rem) {
   .primary-navigation {
-    --underline-gap: 1.5rem;
     position: fixed;
     list-style: none;
-    padding: min(20rem, 10vh) 2rem;
     margin: 0;
     flex-direction: column;
     inset: 0 0 0 60vw;
@@ -369,10 +380,8 @@ header {
 /* Computer Screen */
 @media (min-width: 70rem) {
   .primary-navigation {
-    --underline-gap: 1.5rem;
     position: fixed;
     list-style: none;
-    padding: min(20rem, 10vh) 2rem;
     margin: 0;
     flex-direction: column;
     inset: 0 0 0 75vw;
@@ -383,10 +392,8 @@ header {
 /* Super Wide Screen */
 @media (min-width: 150rem) {
   .primary-navigation {
-    --underline-gap: 1.5rem;
     position: fixed;
     list-style: none;
-    padding: min(20rem, 10vh) 2rem;
     margin: 0;
     flex-direction: column;
     inset: 0 0 0 87vw;
@@ -394,6 +401,18 @@ header {
   }
 }
 
+
+.menu-selector > .possiblehover:hover {
+  animation: mymove 0.4s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-in-out;
+}
+
+@keyframes mymove {
+  0%   {letter-spacing: 2px;}
+  100% {letter-spacing: 5.7px;}
+}
 
 .primary-navigation a {
   text-decoration: none;
