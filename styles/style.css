@@ -6,6 +6,10 @@
   --clr-grey: #202731;
   --clr-light: #f69c01;
   --clr-white: #ffffff;
+
+  --clr-dark-hsl: 240 3% 6%;
+  --clr-grey-hsl: 215 21% 16%;
+  --clr-light-hsl: 38 99% 48%;
   --clr-white-hsl: 0 0% 100%;
 
   /* font sizes */
@@ -128,6 +132,18 @@ header {
 .flow > *:where(:not(:first-child)) {
   margin-top: var(--flow-space, 1rem);
   /* outline: 1px solid red; */
+}
+
+.sr-only {
+  position: absolute; 
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px; 
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap; /* added line */
+  border: 0;
 }
 
 /* colors */
@@ -315,13 +331,70 @@ header {
 
 
 /* Navigation */
+
+/* Mobile */
 .primary-navigation {
-  --gap: 8rem;
   --underline-gap: 1.5rem;
+  position: fixed;
   list-style: none;
-  padding: 0;
+  padding: min(20rem, 10vh) 2rem;
   margin: 0;
+  flex-direction: column;
+  inset: 0 0 0 30vw;
+  z-index: 1000;
+  background: hsl(var(--clr-dark-hsl) / 1);
 }
+
+@supports (backdrop-filter: blur(1.5rem)) {
+  .primary-navigation {
+      background: hsl( var(--clr-white-hsl) / 0.07);
+      backdrop-filter: blur(1.5rem);
+  }
+}
+
+/* Tablet */
+@media (min-width: 35rem) {
+  .primary-navigation {
+    --underline-gap: 1.5rem;
+    position: fixed;
+    list-style: none;
+    padding: min(20rem, 10vh) 2rem;
+    margin: 0;
+    flex-direction: column;
+    inset: 0 0 0 60vw;
+    z-index: 1000;
+  }
+}
+
+/* Computer Screen */
+@media (min-width: 70rem) {
+  .primary-navigation {
+    --underline-gap: 1.5rem;
+    position: fixed;
+    list-style: none;
+    padding: min(20rem, 10vh) 2rem;
+    margin: 0;
+    flex-direction: column;
+    inset: 0 0 0 75vw;
+    z-index: 1000;
+  }
+}
+
+/* Super Wide Screen */
+@media (min-width: 150rem) {
+  .primary-navigation {
+    --underline-gap: 1.5rem;
+    position: fixed;
+    list-style: none;
+    padding: min(20rem, 10vh) 2rem;
+    margin: 0;
+    flex-direction: column;
+    inset: 0 0 0 87vw;
+    z-index: 1000;
+  }
+}
+
+
 .primary-navigation a {
   text-decoration: none;
 }
@@ -361,4 +434,8 @@ header {
 
 .dot-indicators > .possiblehover:hover {
   opacity: 75%;
+}
+
+.dot-indicators > [aria-selected="true"] {
+  background-color: hsl(var(--clr-white-hsl) / 1); 
 }
