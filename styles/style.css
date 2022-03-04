@@ -333,6 +333,21 @@ header {
 
 /* Navigation */
 
+.nav_icon {
+  display: block;
+  position: absolute;
+  z-index: 2000;
+  right: 2rem;
+  top: 2rem;
+  background: transparent;
+  background-image: url(./assets/icons8-menu.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 2rem;
+  aspect-ratio: 1;
+  border: 0;
+}
+
 /* Mobile / standard base */
 .primary-navigation {
   /* --underline-gap: 1.5rem; */
@@ -344,6 +359,7 @@ header {
   inset: 0 0 0 0vw;
   z-index: 1000;
   background: hsl(var(--clr-dark-hsl) / 1);
+  transform: translateX(100%);
 }
 
 .main_indicators {
@@ -458,3 +474,9 @@ header {
 .dot-indicators > [aria-selected="true"] {
   background-color: hsl(var(--clr-white-hsl) / 1); 
 }
+
+
+
+
+
+
