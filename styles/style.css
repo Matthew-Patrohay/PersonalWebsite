@@ -360,6 +360,11 @@ header {
   z-index: 1000;
   background: hsl(var(--clr-dark-hsl) / 1);
   transform: translateX(100%);
+  transition: transform 500ms ease-in-out;
+}
+
+.primary-navigation[data-visible="true"] {
+  transform: translateX(0%);
 }
 
 .main_indicators {
@@ -419,7 +424,7 @@ header {
 
 
 .menu-selector > .possiblehover:hover {
-  animation: mymove 0.4s;
+  animation: mymove 0.15s;
   animation-iteration-count: 1;
   animation-fill-mode: forwards;
   animation-timing-function: ease-in-out;
@@ -427,7 +432,7 @@ header {
 
 @keyframes mymove {
   0%   {letter-spacing: 2px;}
-  100% {letter-spacing: 5.7px;}
+  100% {letter-spacing: 4px;}
 }
 
 .primary-navigation a {
