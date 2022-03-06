@@ -337,15 +337,57 @@ header {
   display: block;
   position: absolute;
   z-index: 2000;
-  right: 2rem;
-  top: 2rem;
+  right: 1rem;
+  top: 0.5rem;
   background: transparent;
-  background-image: url(./assets/icons8-menu.svg);
-  background-repeat: no-repeat;
   background-size: cover;
-  width: 2rem;
+  width: 4rem;
   aspect-ratio: 1;
   border: 0;
+}
+
+/* Navigation menu selector animation */
+.ham {
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+  transition: transform 400ms;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.hamRotate.active {
+  transform: rotate(45deg);
+}
+.line {
+  fill:none;
+  transition: stroke-dasharray 400ms, stroke-dashoffset 400ms;
+  stroke:#ffffff;
+  stroke-width:3.5;
+  stroke-linecap:round;
+}
+.ham8 .top {
+  stroke-dasharray: 40 160;
+}
+.ham8 .middle {
+  stroke-dasharray: 40 142;
+  transform-origin: 50%;
+  transition: transform 400ms;
+}
+.ham8 .bottom {
+  stroke-dasharray: 40 85;
+  transform-origin: 50%;
+  transition: transform 400ms, stroke-dashoffset 400ms;
+}
+.ham8.active .top {
+  stroke-dashoffset: -64px;
+}
+.ham8.active .middle {
+  //stroke-dashoffset: -20px;
+  transform: rotate(90deg);
+}
+.ham8.active .bottom {
+  stroke-dashoffset: -64px;
 }
 
 /* Mobile / standard base */
@@ -479,6 +521,12 @@ header {
 .dot-indicators > [aria-selected="true"] {
   background-color: hsl(var(--clr-white-hsl) / 1); 
 }
+
+
+
+
+
+
 
 
 
