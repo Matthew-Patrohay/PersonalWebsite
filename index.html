@@ -32,13 +32,6 @@
     <div class="loader-wrapper">
         <span class="loader"><span class="loader-inner"></span></span>
     </div>
-    <script>
-        $(window).on("load",function() {
-            $(".loader-wrapper").fadeOut("slow");
-        });
-    </script>
-
-
 
     <!-- Navigation Toggle Button -->
     <svg class="ham hamRotate ham8 nav_icon" aria-controls="primary-navigation" viewBox="0 0 100 100" width="80" onclick="this.classList.toggle('active')">
@@ -162,7 +155,11 @@
             aperiam rerum.</p>
     </section>
 </div>
+    <script>
+      $(window).on("load",function(){
+          $(".loader-wrapper").fadeOut("slow");
+      });
+    </script>
 </body>
 </main>
-
 </html>
