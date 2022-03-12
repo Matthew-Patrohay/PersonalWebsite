@@ -331,7 +331,7 @@ header {
 }
 
 
-/* Navigation */
+/*-------------------- Navigation -------------------- */
 
 .nav_icon {
   display: block;
@@ -341,6 +341,7 @@ header {
   top: 0.5rem;
   background: transparent;
   background-size: cover;
+  background-position: center;
   width: 4rem;
   aspect-ratio: 1;
   border: 0;
@@ -523,6 +524,7 @@ header {
 }
 
 
+/*-------------------- Loading Screen --------------------  */
 
 
 
