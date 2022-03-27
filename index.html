@@ -24,7 +24,32 @@
     <!-- Javascript -->
     <script src="js/index.js" defer></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-
+    
+    <script>
+        function getStylesheet() {
+              var currentTime = new Date().getHours();
+              console.log(currentTime);
+              if (0 <= currentTime&&currentTime < 5) {
+                location.replace("https://matthew-patrohay.github.io/PersonalWebsite/time-night");
+              }
+              if (5 <= currentTime&&currentTime < 11) {
+                location.replace("https://matthew-patrohay.github.io/PersonalWebsite/time-sunrise");
+              }
+              if (11 <= currentTime&&currentTime < 18) {
+                location.replace("https://matthew-patrohay.github.io/PersonalWebsite/time-day");
+              }
+              if (18 <= currentTime&&currentTime < 21) {
+                location.replace("https://matthew-patrohay.github.io/PersonalWebsite/time-sunset");
+              }
+              if (21 <= currentTime&&currentTime <= 24) {
+                location.replace("https://matthew-patrohay.github.io/PersonalWebsite/time-night");
+              }
+        }
+        
+        getStylesheet();
+        </script>
+        
+        <noscript><link href="main.css" rel="stylesheet"></noscript>
 </head>
 
 <main>
