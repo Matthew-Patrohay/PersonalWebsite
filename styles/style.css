@@ -168,7 +168,7 @@ header {
 .background_accent { background: var(--clr-light);}
 .background_white { background: var(--clr-white);}
 
-.background_day { background-image: ./styles/assets/images/paralax_day/Backgroundtest.png;}
+.background_day { background-image: url(./styles/assets/images/paralax_day/Backgroundtest.png);}
 
 .background_blue { background: #3c31dd; }
 .background_red { background: #dd3f31; }
