@@ -87,7 +87,6 @@ section {
   display: flex;
   flex-direction: column;
   align-items: center;
-  min-height: 400px;
   padding: 0px 20vw;
 }
 
@@ -246,6 +245,10 @@ header {
   background-size: cover;
 }
 
+.thickspacer {
+  height: 100%;
+}
+
 .thinspacer {
   aspect-ratio: 960/100;
 }
@@ -308,7 +311,7 @@ header {
   transform: translateZ(-4px) scale(1.4);
 }
 .background_8 {
-  transform: translateZ(0px) scale(1);
+  transform: translateZ(0px) scale(1.05);
 }
 .title_paralax {
   transform: translateZ(-30px) scale(3.5);
