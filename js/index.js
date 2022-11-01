@@ -1,3 +1,6 @@
+// Addressing the issues with AOS's integrationwith wrappers
+$('.wrapper').scroll(function () { AOS.refresh(); });
+
 // Run on document being ready
 $(document).ready(function() {
 	on_doc_ready();

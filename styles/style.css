@@ -265,7 +265,8 @@ header {
 /* -------------------- Paralax styling -------------------- */
 .wrapper {
   height: 100vh;
-  overflow-y: auto;
+  width: 100vw;
+  overflow-y: show;
   overflow-x: hidden;
   perspective: 10px;
 }
@@ -586,7 +587,10 @@ header {
   100% {height: rotate(0%);}
 }
 
-
+.debug-border{
+  border-style: solid;
+  border-color: red;
+}
 
 
 
