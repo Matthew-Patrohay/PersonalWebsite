@@ -16,14 +16,16 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
     
     <!-- CSS -->
-    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/style.css"> <!-- My Stylesheet -->
+    <link rel="stylesheet" href="styles/aos.css"> <!-- Animation on Scroll Stylesheet (By michalsnik) -->
+    
+    <!-- Javascript -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="js/aos.js"></script> <!-- Animation on Scroll JS (By michalsnik) -->
+    <script src="js/index.js" defer></script> <!-- My JS -->
 
     <!-- Page Title -->
     <title>Matthew Patrohay</title>
-    
-    <!-- Javascript -->
-    <script src="js/index.js" defer></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
 </head>
 
@@ -71,10 +73,12 @@
             <img src="styles/assets/images/paralax_day/8_paralax.png" class="background_8">
 
             <!-- Main page title, in paralax -->
-            <h1 class="font_weight_thin montserrat title title_paralax">
+            <div class="title_paralax">
+            <h1 data-aos="fade-up-name_title" data-aos-easing="ease-out" data-aos-duration="3000" data-aos-once="false" class="font_weight_thin montserrat title">
                 Matthew <br>
                 Patrohay <br> 
             </h1>
+            </div>
 
         </header>
 
@@ -83,8 +87,9 @@
         <section class="background_day text_section">
             <img src="styles/assets/images/paralax_day/Backgroundtest.png" class="background_text">
 
-            <h1>Nice Curves</h1>
-            <p>Test: Lorem ipsum, dolor sit amet consectetur adipisicing elist. Dolorum nihil dolor aut corporis quibusdam amet
+            <h1 data-aos="fade-left">Nice Curves</h1>
+            <p data-aos="fade-right" data-aos-delay="350" class="aos-init aos-animate">Hamilton Southeastern HS (2020)</p>
+            <p data-aos="fade-left">Test: Lorem ipsum, dolor sit amet consectetur adipisicing elist. Dolorum nihil dolor aut corporis quibusdam amet
             accusamus hic laboriosam, labore, ab voluptates, molestias dolorem culpa nostrum expedita asperiores nulla
             reprehenderit saepe!</p>
 
