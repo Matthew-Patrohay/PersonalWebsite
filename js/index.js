@@ -1,5 +1,8 @@
-// Addressing the issues with AOS's integrationwith wrappers
-$('.wrapper').scroll(function () { AOS.refresh(); });
+// Occur on scroll
+$('.wrapper').scroll(function () { 
+    AOS.refresh(); // Refresh AOS to fix the issue with displaying 
+    $(".scroll-down").fadeOut("slow"); // Get rid of scroll reminder arrow
+});
 
 // Run on document being ready
 $(document).ready(function() {
