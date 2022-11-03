@@ -24,11 +24,16 @@
   --color-day-8: #74c9cc;
 
   /* font sizes */
+  --font-size-1200: 25rem;
+  --font-size-1100: 20rem;
+  --font-size-1000: 15rem;
   --font-size-900: 9.375rem;
   --font-size-800: 6.25rem;
   --font-size-700: 3.5rem;
+  --font-size-650: 3rem;
   --font-size-600: 2rem;
   --font-size-500: 1.75rem;
+  --font-size-450: 1.45rem;
   --font-size-400: 1.125rem;
   --font-size-300: 1rem;
   --font-size-200: 0.875rem;
@@ -91,23 +96,6 @@ section {
   min-height: 400px;
   padding: 100px 20vw; */
 }
-.text_section {
-  position: relative;
-  font-size: 1rem;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 0px 20vw;
-}
-
-.text_section_left {
-  position: relative;
-  font-size: 1rem;
-  display: flex;
-  flex-direction: column;
-  align-items: left;
-  padding: 0px 20vw;
-}
 
 .background_text {
   position: absolute;
@@ -148,15 +136,6 @@ header {
   padding-inline: 2em;
   margin-inline: auto;
   max-width: 80rem;
-}
-
-.title {
-  font-size: 6rem;
-  color: #ffffff;
-  text-shadow: 0 0 8px #ffffff;
-  line-height: 1;
-  text-align: center;
-  padding-bottom: 15rem;
 }
 
 .flow > *:where(:not(:first-child)) {
@@ -337,7 +316,7 @@ header {
   transform: translateZ(-4px) scale(1.4);
 }
 .background_8 {
-  transform: translateZ(0px) scale(1.05);
+  transform: translateZ(0px) scale(1.1);
 }
 .title_paralax {
   transform: translateZ(-30px) scale(3.5);
@@ -388,10 +367,38 @@ header {
 }
 
 /* -------------------- Introduction Text Formatting -------------------- */
+/* -------------- Phone -------------- */
+.text_section {
+  position: relative;
+  font-size: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0px 10vw;
+}
+
+.text_section_left {
+  position: relative;
+  font-size: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  padding: 0px 10vw;
+}
+
+.title {
+  font-size: 3.5rem;
+  color: #ffffff;
+  text-shadow: 0 0 6px #ffffff;
+  line-height: 1;
+  text-align: center;
+  padding-bottom: 15rem;
+}
+
 .introduction-header {
   color: var(--color-day-8);
   font-weight: 500;
-  font-size: var(--font-size-700);
+  font-size: var(--font-size-400);
   letter-spacing: 5px;
   align-items: left;
   text-align: left;
@@ -400,12 +407,90 @@ header {
 .introduction-paragraph {
   color: var(--color-day-8);
   font-weight: 200;
-  font-size: var(--font-size-500);
+  font-size: var(--font-size-300);
   letter-spacing: 3px;
   align-items: left;
   text-align: left;
 }
 
+/* -------------- Tablet -------------- */
+@media (min-width: 1000px) {
+  .introduction-header {
+    font-size: var(--font-size-600);
+  }
+  
+  .introduction-paragraph {
+    font-size: var(--font-size-400);
+  }
+
+  .title {
+    font-size: 5rem;
+    color: #ffffff;
+    line-height: 1;
+  }
+
+  .text_section {
+    padding: 0px 20vw;
+  }
+  
+  .text_section_left {
+    padding: 0px 20vw;
+  }
+}
+
+
+/* --------- Computer Screen ---------- */
+@media (min-width: 1500px) {
+  .introduction-header {
+    font-size: var(--font-size-700);
+  }
+  
+  .introduction-paragraph {
+    font-size: var(--font-size-500);
+  }
+
+  .title {
+    font-size: 8rem;
+    color: #ffffff;
+    line-height: 1;
+    padding-bottom: 20rem;
+  }
+}
+
+/* -------- Wide Screen -------- */
+@media (min-width: 2000px) {
+  .introduction-header {
+    font-size: var(--font-size-700);
+  }
+  
+  .introduction-paragraph {
+    font-size: var(--font-size-500);
+  }
+
+  .title {
+    font-size: 10rem;
+    color: #ffffff;
+    line-height: 1;
+  }
+}
+
+/* -------- Ultra-Wide Screen -------- */
+@media (min-width: 3500px) {
+  .introduction-header {
+    font-size: var(--font-size-800);
+  }
+  
+  .introduction-paragraph {
+    font-size: var(--font-size-600);
+  }
+
+  .title {
+    font-size: 12rem;
+    color: #ffffff;
+    line-height: 1;
+    padding-bottom: 25rem;
+  }
+}
 
 /* -------------------- Components styling -------------------- */
 
@@ -687,7 +772,7 @@ header {
 /* Add this attribute to the element that needs a tooltip */
 [data-tooltip] {
 	position: relative;
-	z-index: 2;
+	z-index: 500;
 	cursor: pointer;
 }
 /* Hide the tooltip content by default */
@@ -708,6 +793,7 @@ header {
 	margin-left: -80px;
 	padding: 7px;
 	width: 40vw;
+  min-height: 10vh;
 	-webkit-border-radius: 3px;
 	-moz-border-radius: 3px;
 	border-radius: 3px;
