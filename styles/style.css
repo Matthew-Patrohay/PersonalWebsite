@@ -595,6 +595,7 @@ header {
   background: hsl(var(--clr-dark-hsl) / 1);
   transform: translateX(100%);
   transition: transform 500ms ease-in-out;
+  align-items: center;
 }
 
 .primary-navigation[data-visible="true"] {
@@ -835,58 +836,34 @@ header {
 .time-selectors{
   padding: 0;
   margin: 0;
-  position: absolute;
-  top: 90%;
-  transform: translateY(-50%);
+  position: relative;
   width: 100%;
   text-align: center;
-  align-items: center;
 }
 .btn{
   display: inline-block;
   aspect-ratio: 1/1;
-  width: 10%;
-  background: var(--color-day-2);
+  width: 20%;
   margin: 0.5%;
   border-radius: 30%;
-  box-shadow: 0 5px 15px -5px #00000070;
-  color: var(--color-day-7);
+  border-style: solid;
+  border-width: 2%;
+  border-color: var(--color-day-2);
+  fill: var(--color-day-2);
+  background: var(--color-day-5);
   overflow: hidden;
   position: relative;
 }
 .btn {
-  line-height: 90px;
-  font-size: 26px;
-  transition: 0.2s linear;
+  transition: 0.3s linear;
 }
-.btn:hover i{
+.btn:hover {
   transform: scale(1.3);
-  color: var(--color-day-2);
+  border-color: var(--color-day-5);
+  fill: var(--color-day-5);
+  background: var(--color-day-2);
 }
-.btn::before{
-  content: "";
-  position: absolute;
-  width: 120%;
-  height: 120%;
-  background: var(--color-day-7);
-  transform: rotate(45deg);
-  left: -110%;
-  top: 90%;
-}
-.btn:hover::before{
-  animation: aaa 0.7s 1;
-  top: -10%;
-  left: -10%;
-}
-@keyframes aaa {
-  0%{
-    left: -110%;
-    top: 90%;
-  }50%{
-    left: 10%;
-    top: -30%;
-  }100%{
-    top: -10%;
-    left: -10%;
-  }
+.svg-time-icon {
+  margin: 10%;
+  width: 80%;
 }
