@@ -539,6 +539,23 @@ header {
   border: 0;
 }
 
+.nav_clock {
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+  transition: transform 400ms;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  z-index: 2001;
+  padding: 0;
+  right: 5rem;
+  top: 1.75rem;
+  width: 2rem;
+  height: 1.5rem;
+  fill: #a9a9a9;
+}
+
 /* Navigation menu selector animation */
 .ham {
   cursor: pointer;

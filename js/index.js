@@ -39,6 +39,21 @@ navToggle.addEventListener("click", () => {
 })
 
 
+// Function for showing the time selectors
+const navClock = document.querySelector(".nav_clock");
+navClock.addEventListener("click", () => {
+    const nav_clock = document.getElementById('nav_clock_selectors');
+    const nav_clock_button = document.getElementById('nav_clock_button');
+
+    if (nav_clock.style.display === "none") {
+        nav_clock.style.display = "block";
+        nav_clock_button.style.fill = "#d3d3d3";
+    } else {
+        nav_clock.style.display = "none";
+        nav_clock_button.style.fill = "#a9a9a9";
+    }
+  })
+
 // Loading Screen fade out
 $(window).on("load",function(){
     $(".loader-wrapper").fadeOut("slow");
