@@ -40,6 +40,7 @@ navToggle.addEventListener("click", () => {
 
 
 // Function for showing the time selectors
+/*
 const navClock = document.querySelector(".nav_clock");
 navClock.addEventListener("click", () => {
     const nav_clock = document.getElementById('nav_clock_selectors');
@@ -53,6 +54,7 @@ navClock.addEventListener("click", () => {
         nav_clock_button.style.fill = "#a9a9a9";
     }
   })
+*/
 
 // Loading Screen fade out
 $(window).on("load",function(){
