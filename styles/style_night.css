@@ -13,15 +13,15 @@
   --clr-white-hsl: 0 0% 100%;
   --clr-blur-hsl: 148 0% 66%;
 
-  --color-day-0: #135866;
-  --color-day-1: #136476;
-  --color-day-2: #127185;
-  --color-day-3: #128193;
-  --color-day-4: #0e91a6;
-  --color-day-5: #30a0b7;
-  --color-day-6: #45aabc;
-  --color-day-7: #59b6bf;
-  --color-day-8: #74c9cc;
+  --color-day-0: #04082e;
+  --color-day-1: #0a0c3d;
+  --color-day-2: #12124e;
+  --color-day-3: #14195b;
+  --color-day-4: #171d69;
+  --color-day-5: #1a2e6d;
+  --color-day-6: #223d71;
+  --color-day-7: #264d75;
+  --color-day-8: #225276;
 
   /* font sizes */
   --font-size-1200: 25rem;
@@ -253,7 +253,7 @@ header {
 }
 
 .layer1 {
-  background-image: url(./assets/images/paralax_day/Backgroundtest.png);
+  background-image: url(./assets/images/paralax_night/spacer_color_night.png);
 }
 
 .flip {
