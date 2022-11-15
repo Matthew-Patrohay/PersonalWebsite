@@ -14,7 +14,7 @@
   --clr-blur-hsl: 148 0% 66%;
 
   --color-day-0: #2c2341;
-  --color-day-1: #412a4c;
+  --color-day-1: #3c2244;
   --color-day-2: #4f2d48;
   --color-day-3: #5a314a;
   --color-day-4: #683149;
@@ -22,6 +22,7 @@
   --color-day-6: #7c3847;
   --color-day-7: #ac4944;
   --color-day-8: #c35840;
+  --color-day-9: #EF8354;
 
   /* font sizes */
   --font-size-1200: 25rem;
@@ -396,8 +397,8 @@ header {
 }
 
 .introduction-header {
-  color: var(--color-day-8);
-  font-weight: 500;
+  color: var(--color-day-7);
+  font-weight: 600;
   font-size: var(--font-size-400);
   letter-spacing: 5px;
   align-items: left;
@@ -405,8 +406,8 @@ header {
 }
 
 .introduction-paragraph {
-  color: var(--color-day-8);
-  font-weight: 200;
+  color: var(--color-day-7);
+  font-weight: 400;
   font-size: var(--font-size-300);
   letter-spacing: 3px;
   align-items: left;

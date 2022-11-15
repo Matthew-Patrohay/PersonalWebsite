@@ -22,6 +22,7 @@
   --color-day-6: #223d71;
   --color-day-7: #264d75;
   --color-day-8: #225276;
+  --color-day-9: #40598C;
 
   /* font sizes */
   --font-size-1200: 25rem;
@@ -396,8 +397,8 @@ header {
 }
 
 .introduction-header {
-  color: var(--color-day-8);
-  font-weight: 500;
+  color: var(--color-day-9);
+  font-weight: 600;
   font-size: var(--font-size-400);
   letter-spacing: 5px;
   align-items: left;
@@ -405,8 +406,8 @@ header {
 }
 
 .introduction-paragraph {
-  color: var(--color-day-8);
-  font-weight: 200;
+  color: var(--color-day-9);
+  font-weight: 400;
   font-size: var(--font-size-300);
   letter-spacing: 3px;
   align-items: left;
